@@ -3,8 +3,8 @@ Spatialeds Web
 
 ## Backend
 
-- [ ] HTTP endpoint for getting current input schema (called by user client)
-- [ ] HTTP endpoint for pushing new input schema (called by pattern generator)
+- [x] `/control-schema` Get input schema
+- [x] `/control-schema` Set input schema
 - [ ] HTTP endpoint for sending input values (called by user client)
 - [ ] HTTP endpoint for getting current values (called by pattern generator)
 
