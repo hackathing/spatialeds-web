@@ -1,7 +1,7 @@
 const app = require('.');
 const request = require('supertest');
 
-describe('routes: /', () => {
+describe('GET /', () => {
   it('renders OK', done => {
     request(app)
       .get('/')
@@ -13,7 +13,7 @@ describe('routes: /', () => {
   });
 });
 
-describe('routes: /main.js', () => {
+describe('GET /main.js', () => {
   it('renders OK', done => {
     request(app)
       .get('/main.js')

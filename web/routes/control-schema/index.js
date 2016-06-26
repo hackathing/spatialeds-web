@@ -1,16 +1,16 @@
-const schema = require('../control-schema');
+const controlSchema = require('../../control-schema');
 
-// TODO
-function show(req, res) {
-
+exports.show = function show(req, res) {
+  const schema = controlSchema.get(schema);
+  res.status(200).json({ schema: schema })
 }
 
-// TODO
-function create(req, res) {
-
-}
-
-module.exports = {
-  show: show,
-  create: create,
+exports.create = function create(req, res) {
+  const schema = req.body.schema;
+  if (schema) {
+    controlSchema.put(schema);
+    res.status(201).json({ status: 'created' })
+  } else {
+    res.status(400).json({ error: 'schema not supplied' })
+  }
 }
