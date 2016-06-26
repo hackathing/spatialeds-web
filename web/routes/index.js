@@ -10,6 +10,7 @@ const controlSchema = require('./control-schema');
 const control       = require('./control');
 
 app.get('/', page.home);
+app.get('/main.js', page.js);
 app.post('/control-schema', controlSchema.create);
 app.get('/control-schema', controlSchema.show);
 app.post('/controls', control.create);

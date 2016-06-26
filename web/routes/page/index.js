@@ -1,10 +1,11 @@
 const path = require('path');
 
-function home(req, res) {
+exports.home = function home(req, res) {
   const filePath = path.join(__dirname, '..', '..', 'index.html');
   res.sendFile(filePath);
 }
 
-module.exports = {
-  home: home,
-};
+exports.js = function js(req, res) {
+  const filePath = path.join(__dirname, '..', '..', 'client.js');
+  res.sendFile(filePath);
+}
