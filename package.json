@@ -1,0 +1,23 @@
+{
+  "name": "spatialeds-web",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hackathing/spatialeds-web.git"
+  },
+  "author": "People",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hackathing/spatialeds-web/issues"
+  },
+  "homepage": "https://github.com/hackathing/spatialeds-web#readme",
+  "dependencies": {
+    "express": "^4.14.0",
+    "morgan": "^1.7.0"
+  }
+}

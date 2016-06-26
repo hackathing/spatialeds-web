@@ -1,0 +1,13 @@
+*.log
+*.pid
+*.seed
+.grunt
+.lock-wscript
+.node_repl_history
+.npm
+.nyc_output
+build/Release
+logs
+node_modules
+npm-debug.log*
+pids
