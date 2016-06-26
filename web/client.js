@@ -1,21 +1,13 @@
-var inputSchema = [
-  {
-    label: 'Shininess',
-    key: 'shininess',
-    type: 'range',
-    max: 100,
-    min: 0,
-  },
-  {
-    label: 'Loudness',
-    key: 'loudness',
-    type: 'range',
-    max: 11,
-    min: 0,
-  },
-];
-
-
+function getSchema() {
+  fetch('/control-schema')
+    .then(function(response) {
+      return response.json();
+    }).then(function(json) {
+      createSliders(json.schema);
+    }).catch(function(ex) {
+      console.log('parsing failed', ex);
+    });
+}
 
 var sliders = document.querySelector("#sliders");
 
@@ -37,9 +29,11 @@ function createSlider(sliderObj) {
 }
 
 function createSliders(schema) {
+  sliders.innerHTML = "";
   schema.map(createSlider);
 }
 
-createSliders(inputSchema);
+getSchema();
+setInterval(getSchema, 1000);
 
 
