@@ -14,7 +14,7 @@ Spatialeds Web
 
 - [x] Query server for current schema
 - [x] Build GUI controls from schema
-- [ ] Push values to server
+- [x] Push values to server
 - [ ] Look pretty
 
 ## Usage
