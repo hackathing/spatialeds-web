@@ -5,13 +5,21 @@ function getSchema() {
     .then(function(response) {
       return response.json();
     }).then(function(json) {
-      createSliders(json.schema);
+      updateSchema(json.schema);
     }).catch(function(ex) {
       console.log('parsing failed', ex);
     });
 }
 
 var sliders = document.querySelector("#sliders");
+
+var schema;
+function updateSchema(newSchema) {
+  if (JSON.stringify(schema) !== JSON.stringify(newSchema)) {
+    schema = newSchema;
+    createSliders(schema)
+  }
+}
 
 // Create a div containing slider, its name and min/max values
 function createSlider(sliderObj) {
