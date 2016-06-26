@@ -19,9 +19,12 @@ Spatialeds Web
 
 ## Usage
 
-Install node.js.
-
 ```sh
+cd /path/to/project
+
+# Install Node
+sudo apt-get install nodejs-legacy
+
 # Install deps
 npm install
 
