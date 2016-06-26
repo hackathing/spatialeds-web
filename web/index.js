@@ -7,19 +7,16 @@ const app = express();
 
 app.use(morgan('dev'));
 
-const page = require('./routes/page');
+const page          = require('./routes/page');
+const controlSchema = require('./routes/control-schema');
+const control       = require('./routes/control');
 
 app.get('/', page.home);
 
-// TODO
-app.post('/control-schema', function(req, res) { });
-// TODO
-app.get('/control-schema', function(req, res) { });
-
-// TODO
-app.post('/controls', function(req, res) { });
-// TODO
-app.get('/controls', function(req, res) { });
+app.post('/control-schema', controlSchema.create);
+app.get('/control-schema', controlSchema.show);
+app.post('/controls', control.create);
+app.get('/controls', control.show);
 
 app.listen(port, function(error) {
   if (error) {

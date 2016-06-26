@@ -7,7 +7,7 @@ clean: ## Remove compiled files
 	rm -rf dist/*
 
 start: ## Start the dev server
-	node web/index.js --presets es2015,stage-0
+	node web/index.js
 
 test: ## Run the tests
 	$(testCmd)
