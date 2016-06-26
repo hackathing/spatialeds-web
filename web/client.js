@@ -15,6 +15,8 @@ var inputSchema = [
   },
 ];
 
+
+
 var sliders = document.querySelector("#sliders");
 
 // Create a div containing slider, its name and min/max values
@@ -34,5 +36,10 @@ function createSlider(sliderObj) {
   sliders.appendChild(listel);
 }
 
-inputSchema.map(createSlider);
+function createSliders(schema) {
+  schema.map(createSlider);
+}
+
+createSliders(inputSchema);
+
 

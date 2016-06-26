@@ -5,6 +5,7 @@ const tagUserMiddleware = require('../middleware/tag-user');
 
 const app = express();
 
+app.use(express.static('vendor'));
 app.use(bodyParser.json());
 app.use(cookieSession({ keys: ["Hack me, I don't care."] }));
 app.use(tagUserMiddleware);
