@@ -1,9 +1,12 @@
 const express = require('express');
+const morgan = require('morgan');
 const bodyParser = require('body-parser');
 const cookieSession = require('cookie-session');
 const tagUserMiddleware = require('../middleware/tag-user');
 
 const app = express();
+
+(process.env.NODE_ENV !== 'test') && app.use(morgan('dev'))
 
 app.use(express.static('vendor'));
 app.use(bodyParser.json());
