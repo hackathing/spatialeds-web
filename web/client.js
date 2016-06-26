@@ -1,5 +1,7 @@
 function getSchema() {
-  fetch('/control-schema')
+  fetch('/control-schema', {
+    credentials: 'same-origin',
+  })
     .then(function(response) {
       return response.json();
     }).then(function(json) {
