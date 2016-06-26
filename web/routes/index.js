@@ -1,9 +1,13 @@
 const express = require('express');
 const bodyParser = require('body-parser');
+const cookieSession = require('cookie-session');
+const tagUserMiddleware = require('../middleware/tag-user');
 
 const app = express();
 
-app.use(bodyParser.json())
+app.use(bodyParser.json());
+app.use(cookieSession({ keys: ["Hack me, I don't care."] }));
+app.use(tagUserMiddleware);
 
 const page          = require('./page');
 const controlSchema = require('./control-schema');

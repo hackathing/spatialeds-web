@@ -12,7 +12,7 @@ Spatialeds Web
 ## Frontend
 
 - [ ] Query server for current schema
-- [ ] Build GUI controls from schema
+- [x] Build GUI controls from schema
 - [ ] Push values to server
 - [ ] Look pretty
 

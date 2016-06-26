@@ -19,9 +19,12 @@
   "dependencies": {
     "body-parser": "^1.15.2",
     "chai": "^3.5.0",
+    "cookie-session": "^2.0.0-alpha.1",
     "express": "^4.14.0",
+    "install": "^0.8.1",
     "mocha": "^2.5.3",
     "morgan": "^1.7.0",
+    "npm": "^3.10.2",
     "supertest": "^1.2.0"
   }
 }
