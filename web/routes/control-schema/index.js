@@ -1,7 +1,7 @@
 const controlSchema = require('../../control-schema');
 
 exports.show = function show(req, res) {
-  const schema = controlSchema.get(schema);
+  const schema = controlSchema.get();
   res.status(200).json({ schema: schema })
 }
 

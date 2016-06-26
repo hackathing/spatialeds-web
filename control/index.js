@@ -1,9 +1,9 @@
-var schema;
+var state;
 
 exports.put = function put(x) {
-  schema = x;
+  state = x;
 }
 
 exports.get = function get() {
-  return schema
+  return state
 }
