@@ -7,8 +7,9 @@ const app = express();
 
 app.use(morgan('dev'));
 
-// TODO
-app.get('/', function(req, res) { });
+const page = require('./routes/page');
+
+app.get('/', page.home);
 
 // TODO
 app.post('/control-schema', function(req, res) { });
@@ -24,7 +25,7 @@ app.listen(port, function(error) {
   if (error) {
     logger.error(error);
   } else {
-    logger.info(`==> Listening on port ${port}.`);
+    logger.info('==> Listening on port ' + port);
   }
 });
 
