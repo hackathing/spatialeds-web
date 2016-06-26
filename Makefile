@@ -1,4 +1,6 @@
-testCmd = find . -path ./node_modules -prune -o -name '*test.js' | xargs $(mocha) --require ./mocha-env.js
+mocha = ./node_modules/mocha/bin/mocha
+
+testCmd = find . -path ./node_modules -prune -o -name '*test.js' | xargs $(mocha) --require ./test/helper.js
 
 help:
 	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | sort | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-30s\033[0m %s\n", $$1, $$2}'
