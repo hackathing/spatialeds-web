@@ -1,4 +1,4 @@
-const controls = require('../../../control');
+const controls = require('../../control');
 
 exports.show = function show(req, res) {
   const data = controls.get();

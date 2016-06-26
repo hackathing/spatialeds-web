@@ -1,6 +1,6 @@
 const app = require('..');
 const request = require('supertest');
-const controls = require('../../../control');
+const controls = require('../../control');
 
 describe('POST /controls', () => {
   it('persists the schema', done => {

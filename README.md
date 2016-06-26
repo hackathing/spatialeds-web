@@ -7,6 +7,7 @@ Spatialeds Web
 - [x] `POST /control-schema` Set input schema
 - [x] `GET /controls` Get control values
 - [x] `POST /controls` Set control values
+- [ ] Voting
 
 ## Frontend
 
