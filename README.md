@@ -7,11 +7,12 @@ Spatialeds Web
 - [x] `POST /control-schema` Set input schema
 - [x] `GET /controls` Get control values
 - [x] `POST /controls` Set control values
-- [ ] Voting
+- [ ] Weighted average for control values
+- [ ] Control values decay
 
 ## Frontend
 
-- [ ] Query server for current schema
+- [x] Query server for current schema
 - [x] Build GUI controls from schema
 - [ ] Push values to server
 - [ ] Look pretty
