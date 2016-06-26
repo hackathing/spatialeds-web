@@ -1,3 +1,5 @@
+const schema = require('../control-schema');
+
 // TODO
 function show(req, res) {
 
