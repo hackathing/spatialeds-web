@@ -17,7 +17,9 @@ Spatialeds Web
 - [x] Push values to server
 - [ ] Look pretty
 
-## Usage
+## Dev Usage
+
+Run `make` to print help.
 
 ```sh
 cd /path/to/project
@@ -26,12 +28,29 @@ cd /path/to/project
 sudo apt-get install nodejs-legacy
 
 # Install deps
-npm install
+make install
 
-# Start server
+# Start server (dev mode)
 make start
 
 # Run tests
 make test
 make test-watch
+```
+
+
+## Production Usage
+
+```sh
+cd /path/to/project
+
+# Install Node
+sudo apt-get install nodejs-legacy
+
+# Install deps
+make install
+
+# Install and start the app as a service
+make service-install # Be sure to read the output!
+make service-start
 ```
