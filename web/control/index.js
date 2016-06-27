@@ -1,9 +1,19 @@
-var state;
+var dfault = {}
+var state = {};
 
-exports.put = function put(x) {
-  state = x;
+exports.reset = function reset(values) {
+  dfault = values;
+  state = { default: values };
 }
 
-exports.get = function get() {
+exports.push = function push(key, values) {
+  state[key] = values;
+}
+
+exports.getValues = function getValues() {
   return state
+}
+
+exports.getAverage = function getAverage() {
+  throw new Error('getAverage not implemented');
 }
