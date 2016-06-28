@@ -15,9 +15,12 @@ function debounce(func, wait) {
 };
 
 function sendControls() {
-  var controls = [];
+  var controls = {};
   var sliders = sliderContainer.querySelectorAll('input');
   var i = sliders.length;
+  while (i--) {
+    controls[sliders[i].dataset.key] = sliders[i].value;
+  }
   fetch('/controls', {
     credentials: 'same-origin',
     method: 'POST',

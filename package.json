@@ -19,6 +19,7 @@
     "cookie-session": "^2.0.0-alpha.1",
     "express": "^4.14.0",
     "install": "^0.8.1",
+    "lodash": "^4.13.1",
     "mocha": "^2.5.3",
     "morgan": "^1.7.0",
     "npm": "^3.10.2",
